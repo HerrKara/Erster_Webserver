@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuen Tutorial anlegen</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/forms.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/img/Logo.webp" alt="Logo der Website" width="50" />
+      <h1>TutoriWeb</h1>
+    </header>
+
+    <nav>
+      <a href="./list.html">Kategorien</a>
+      <a href="./tutorials.html">Alle Tutorials</a>
+      <a href="./tutorial.html">Tutorial</a>
+      <a href="./form.html">Neues Tutorial</a>
+    </nav>
+
+    <main>
+      <h2>Neues Tutorial erstellen</h2>
+      <fieldset>
+        <legend>Info</legend>
+
+        <form action="https://labs.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php" method="post">
+
+          <label class="required-label">
+            Titel:
+            <input
+              type="text"
+              name="name"
+              required
+              minlength="4"
+              maxlength="20"
+              pattern="[A-Z].*"
+              placeholder="z.B Powerpoint Morphen"
+            />
+          </label>
+
+          <p>
+            <label>Sprache:</label><br />
+            <label><input type="radio" name="language" value="de" checked> Deutsch</label><br />
+            <label><input type="radio" name="language" value="en"> English</label><br />
+            <label><input type="radio" name="language" value="es"> Spanisch</label><br />
+            <label><input type="radio" name="language" value="fr"> Französisch</label>
+          </p>
+
+          <label class="required-label">
+            Kategorie(n):
+            <input type="text" name="categories" pattern="[^,]+(,[^,]+)*" required />
+          </label>
+
+          <label>
+            Beschreibung:
+            <textarea
+              name="description"
+              minlength="40"
+              cols="40"
+              rows="5"
+              placeholder="Um den Morph-Übergang effektiv einzusetzen, benötigen Sie zwei Folien..."
+            ></textarea>
+          </label>
+
+          <label class="required-label">
+            Dauer:
+            <input type="time" min="00:20" max="15:59" name="duration" required value="12:00" />
+          </label>
+
+          <label class="required-label">
+            Datum:
+            <input type="date" name="date" required />
+          </label>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Inhalt</legend>
+
+        <label><input type="radio" name="type" checked> Text-Tutorial</label><br />
+        <label><input type="radio" name="type"> Video-Tutorial</label><br />
+
+        <label class="required-label">
+          Text oder URL:
+          <textarea name="content" required placeholder="Gib deinen Inhalt ein"></textarea>
+        </label>
+      </fieldset>
+
+      <button type="submit">Senden</button>
+
+      </form>
+    </main>
+
+    <aside>
+      <h3>Neue Tutorials</h3>
+      <ul>
+        <li><strong>Pasta alla Carbonara</strong> - 20. April 2023 - 2 Std. 10 Min.</li>
+        <li><strong>Pickatchu Mütze</strong> - 15. April 2023 - 3 Std. 05 Min.</li>
+        <li><strong>Perfekte Steaks braten</strong> - 10. April 2023 - 1 Std. 45 Min.</li>
+        <li><strong>Java Grundlagen</strong> - 5. April 2023 - 4 Std. 30 Min.</li>
+        <li><strong>Morph Übergang in Powerpoint</strong> - 1. April 2023 - 2 Std. 00 Min.</li>
+      </ul>
+    </aside>
+
+    <footer>
+      <p><small>&copy; 2024 TutoriWeb from Muhammed Kara and Kiyan do Lago Martins. Alle Rechte vorbehalten.</small></p>
+    </footer>
+
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/burger.js"></script>
+  </body>
+</html>

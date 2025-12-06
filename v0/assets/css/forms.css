@@ -1,0 +1,46 @@
+/*Praktikum 5 ----------*/
+input:invalid {
+    background-color: antiquewhite;
+    border-bottom: 2px red solid;
+}
+
+.required-label::after {
+    content: " (Erforderliches Feld)";
+}
+
+button {
+    background-color: lightcyan;
+    border-radius: 7px;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 3px
+}
+
+button:hover {
+    background-color:aquamarine;
+}
+
+legend {
+    background-color:indianred;
+
+    padding: 3px 5px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+input:not([type="select"]):not([type="textarea"]) {
+border-top: none;
+border-right: none;
+
+
+border-radius: 3px;
+}
+
+input[required] {
+    border-left: 2px solid black;
+}
+
+/*----------*/

@@ -1,0 +1,40 @@
+body {
+    display: grid;
+    grid-template-areas:    'kopf   kopf'
+                            'nav    nav'
+                            'haupt  zusatz'
+                            'fuss   fuss';
+    grid-template-columns: 70% 30%;
+}
+
+header {
+    grid-area: kopf ;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: haupt;
+}
+
+aside {
+    grid-area: zusatz;
+}
+
+footer {
+    grid-area: fuss;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:    'kopf   kopf'
+                                'nav    nav'
+                                'haupt  haupt'
+                                'zusatz zusatz'
+                                'fuss   fuss';
+    }
+
+}
+

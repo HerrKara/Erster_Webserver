@@ -1,0 +1,243 @@
+/* ---------- Grundlayout ---------- */
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "kopf kopf"
+        "nav nav"
+        "haupt zusatz"
+        "fuss fuss";
+    grid-template-columns: 70% 30%;
+    padding-bottom: 100px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    grid-area: kopf;
+    text-align: center;
+    padding: 15px 0;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+    margin: 0;
+}
+
+h2, h3 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    margin: 5px 0;
+}
+
+/* --------- Navigation ---------- */
+
+nav {
+    grid-area: nav;
+    background-color: lightskyblue;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #0004;
+}
+
+nav a {
+    display: inline-block;
+    background-color: lightsalmon;
+    color: white;
+    padding: 7px 15px;
+    margin: 5px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: salmon;
+    color: white;
+}
+
+/* --------- Layout Main & Aside ---------- */
+
+main {
+    grid-area: haupt;
+    padding: 15px;
+}
+
+aside {
+    grid-area: zusatz;
+    background-color: lightblue;
+    border-radius: 15px;
+    border: 5px dashed salmon;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+/* ---------- Tabellen --------- */
+
+.kapitel {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kapitel thead tr,
+.kapitel tfoot tr {
+    background-color: lightsalmon;
+}
+
+.kapitel tbody tr:nth-of-type(odd) {
+    background-color: lightgoldenrodyellow;
+}
+
+.kapitel td, .kapitel th {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- Formulare --------- */
+
+input:invalid {
+    background-color: antiquewhite;
+    border-bottom: 2px solid red;
+}
+
+.required-label::after {
+    content: " (Erforderliches Feld)";
+}
+
+input, textarea {
+    border: 1px solid #888;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 3px;
+    width: 100%;
+}
+
+button {
+    background-color: lightcyan;
+    border-radius: 7px;
+    padding: 8px 12px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #0004;
+    border: none;
+}
+
+button:hover {
+    background-color: aquamarine;
+}
+
+fieldset {
+    border: none;
+    padding: 10px 0;
+}
+
+legend {
+    background-color: indianred;
+    padding: 3px 8px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ---------- Kacheln (Tiles) -------- */
+
+#tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+#tiles li {
+    margin: 10px;
+}
+
+.tile {
+    width: 125px;
+    height: 125px;
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #f8f9fa;
+    box-shadow: 7px 9px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile img {
+    width: 80px;
+    height: 80px;
+}
+
+/* ---------- Bilder in Textbereichen --------- */
+
+section img {
+    float: left;
+    width: 170px;
+    height: auto;
+    margin-right: 10px;
+}
+
+section p {
+    overflow: auto;
+}
+
+/* ---------- Footer -------- */
+
+footer {
+    grid-area: fuss;
+    background-color: lightsalmon;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* ---------- Responsive -------- */
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "kopf"
+            "nav"
+            "haupt"
+            "zusatz"
+            "fuss";
+        grid-template-columns: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #container1 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        display: none;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px auto;
+        width: 140px;
+    }
+
+    section img {
+        width: 120px;
+    }
+}

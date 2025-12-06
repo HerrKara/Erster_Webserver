@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste aller Kategorien</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/flexbox.css">
+    <link rel="stylesheet" href="./assets/css/tiles.css">
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/img/Logo.webp" alt="Logo der Website" width="50" />
+      <h1>TutoriWeb</h1>
+    </header>
+
+    <nav>
+      <a href="./list.html">Kategorien</a>
+      <a href="./tutorials.html">Alle Tutorials</a>
+      <a href="./tutorial.html">Tutorial</a>
+      <a href="./form.html">Neues Tutorial</a>
+    </nav>
+
+    <main>
+      <h2>Kategorien</h2>
+
+      <fieldset>
+        <div id="container1"></div>
+
+        <section>
+          <form action="/search" method="get">
+            <label>
+              Titel: <input type="search" name="search" required minlength="4" maxlength="20" />
+            </label>
+            <button type="submit">Suchen!</button>
+          </form>
+        </section>
+
+        <ol id="tiles">
+          <li>
+            <a href="./tutorials.html" class="tile">
+              Kochen<br />
+              <img src="./assets/img/Gratin.webp" alt="Kochen" width="100" />
+            </a>
+          </li>
+
+          <li>
+            <a href="./tutorials.html" class="tile">
+              Stricken<br />
+              <img src="./assets/img/Stricken.webp" alt="Stricken" width="100" />
+            </a>
+          </li>
+
+          <li>
+            <a href="./tutorials.html" class="tile">
+              Zeichnen<br />
+              <img src="./assets/img/Zeichen.webp" alt="Zeichnen" width="100" />
+            </a>
+          </li>
+
+          <li>
+            <a href="./tutorials.html" class="tile">
+              Microsoft Office<br />
+              <img src="./assets/img/MS Office.webp" alt="MS Office" width="100" />
+            </a>
+          </li>
+
+          <li>
+            <a href="./tutorials.html" class="tile">
+              Web-Anwendung<br />
+              <img src="./assets/img/Web.webp" alt="Web-Anwendung" width="100" />
+            </a>
+          </li>
+        </ol>
+      </fieldset>
+    </main>
+
+    <aside>
+      <h3>Neue Tutorials</h3>
+      <ul>
+        <li><strong>Pasta alla Carbonara</strong> - 20. April 2023 - 2 Std. 10 Min.</li>
+        <li><strong>Pickatchu Mütze</strong> - 15. April 2023 - 3 Std. 05 Min.</li>
+        <li><strong>Perfekte Steaks braten</strong> - 10. April 2023 - 1 Std. 45 Min.</li>
+        <li><strong>Java Grundlagen</strong> - 5. April 2023 - 4 Std. 30 Min.</li>
+        <li><strong>Morph Übergang in Powerpoint</strong> - 1. April 2023 - 2 Std. 00 Min.</li>
+      </ul>
+    </aside>
+
+    <footer>
+      <p>
+        <small>&copy; 2024 TutoriWeb from Muhammed Kara and Kiyan do Lago Martins. Alle Rechte vorbehalten.</small>
+      </p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

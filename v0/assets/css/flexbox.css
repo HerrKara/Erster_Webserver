@@ -1,0 +1,25 @@
+#container1 {
+    display: flex;
+}
+main {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 2;
+}
+
+#container2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    #container1 {
+        flex-direction: column;
+    }
+
+}
+

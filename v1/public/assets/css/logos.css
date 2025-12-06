@@ -1,0 +1,9 @@
+section img {
+    float:left;
+    width: 170px;
+    height: auto;
+    margin-right: 10px;
+}
+section p {
+    overflow: auto;
+}
